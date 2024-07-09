@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import Script from "next/script";
 
 export const AdsWrapper = ({
   id,
@@ -13,7 +14,7 @@ export const AdsWrapper = ({
   size: googletag.GeneralSize;
   divSize?: { x: number; y: number };
 }) => {
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
   // window.googletag = window.googletag || { cmd: [] };
 
@@ -47,15 +48,6 @@ export const AdsWrapper = ({
   //   };
   // }, [pathname, id, label, size]);
 
-  useEffect(() => {
-    try {
-      // @ts-ignore
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (err) {
-      console.log(err);
-    }
-  }, [pathname]);
-
   return (
     <div className="text-center w-full mx-auto">
       <span className="text-[10px]">SPONSORED</span>
@@ -70,7 +62,11 @@ export const AdsWrapper = ({
         data-ad-slot={id.toString()}
         data-ad-format="auto"
         data-full-width-responsive="true"
-      ></ins>
+      >
+        <Script
+          id={`ads-${id}`}
+        >{`(adsbygoogle = window.adsbygoogle || []).push({});`}</Script>
+      </ins>
     </div>
   );
 };
