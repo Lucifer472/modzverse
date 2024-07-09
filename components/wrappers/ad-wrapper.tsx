@@ -65,6 +65,7 @@ export const AdsWrapper = ({
       >
         <Script
           id={`ads-${id}`}
+          strategy="lazyOnload"
         >{`(adsbygoogle = window.adsbygoogle || []).push({});`}</Script>
       </ins>
     </div>
