@@ -14,7 +14,7 @@ export const AdsWrapper = ({
   size: googletag.GeneralSize;
   divSize?: { x: number; y: number };
 }) => {
-  // const pathname = usePathname();
+  const pathname = usePathname();
 
   // window.googletag = window.googletag || { cmd: [] };
 
@@ -48,6 +48,18 @@ export const AdsWrapper = ({
   //   };
   // }, [pathname, id, label, size]);
 
+  useEffect(() => {
+    var ads = document.getElementsByClassName("adsbygoogle").length;
+    for (var i = 0; i < ads; i++) {
+      try {
+        // @ts-ignore
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {
+        console.log(e);
+      }
+    }
+  }, [pathname]);
+
   return (
     <div className="text-center w-full mx-auto">
       <span className="text-[10px]">SPONSORED</span>
@@ -62,12 +74,7 @@ export const AdsWrapper = ({
         data-ad-slot={id.toString()}
         data-ad-format="auto"
         data-full-width-responsive="true"
-      >
-        <Script
-          id={`ads-${id}`}
-          strategy="lazyOnload"
-        >{`(adsbygoogle = window.adsbygoogle || []).push({});`}</Script>
-      </ins>
+      ></ins>
     </div>
   );
 };

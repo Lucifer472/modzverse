@@ -60,7 +60,8 @@ export default function RootLayout({
       <body className={`${poppins.className} overflow-x-hidden`}>
         <Script
           async
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
+          id="google-ads"
           crossOrigin="anonymous"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3776330853847527"
         />
