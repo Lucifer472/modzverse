@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import { blog } from "@prisma/client";
 import Image from "next/image";
 import { Ad1, Ad2, Ad3, Ad5 } from "../ads/ads";
+import { MiddleArticleBlogs } from "../etc/middle-artcle-blogs";
 
 interface blogUser extends blog {
   Author: {
@@ -33,18 +34,18 @@ const BlogMain = ({ blog, link }: { blog: blogUser; link: string }) => {
 
   const adElement4 = {
     type: "Ad",
-    data: Ad1,
+    data: MiddleArticleBlogs,
   };
 
   const adElement5 = {
     type: "Ad",
-    data: Ad5,
+    data: Ad1,
   };
 
   blog.blog.splice(5, 0, adElement2);
   blog.blog.splice(7, 0, adElement3);
   blog.blog.splice(10, 0, adElement4);
-  // blog.blog.splice(12, 0, adElement5);
+  blog.blog.splice(12, 0, adElement5);
 
   return (
     <article className="flex flex-col w-full">

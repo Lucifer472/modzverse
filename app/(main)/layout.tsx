@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-import LoadingWrapper from "@/components/wrappers/loading-wrapper";
 import Navbar from "@/components/navigation/Navbar";
 
 // Main HTML
