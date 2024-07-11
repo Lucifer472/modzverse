@@ -9,7 +9,7 @@ export const getBlogsForClient = async () => {
 
   return await getBlogs({
     take: 4,
-    skip: skip,
+    skip: skip - 4,
     where: {
       isPending: false,
     },

@@ -1,11 +1,15 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
+
 import { convertDateFormat } from "@/lib/date-util";
-import { Separator } from "@/components/ui/separator";
+
 import { blog } from "@prisma/client";
+
 import Image from "next/image";
-import { Ad1, Ad2, Ad3, Ad5 } from "../ads/ads";
-import { MiddleArticleBlogs } from "../etc/middle-artcle-blogs";
+
+import { Ad1, Ad2, Ad3, Ad5 } from "@/components/ads/ads";
+import { MiddleArticleBlogs } from "@/components/etc/middle-article-blogs";
+import { Separator } from "@/components/ui/separator";
 
 interface blogUser extends blog {
   Author: {
@@ -42,7 +46,7 @@ const BlogMain = ({ blog, link }: { blog: blogUser; link: string }) => {
     data: Ad1,
   };
 
-  blog.blog.splice(5, 0, adElement4);
+  blog.blog.splice(4, 0, adElement4);
   blog.blog.splice(10, 0, adElement2);
   blog.blog.splice(7, 0, adElement3);
   blog.blog.splice(12, 0, adElement5);
