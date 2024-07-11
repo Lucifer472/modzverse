@@ -42,9 +42,9 @@ const BlogMain = ({ blog, link }: { blog: blogUser; link: string }) => {
     data: Ad1,
   };
 
-  blog.blog.splice(5, 0, adElement2);
+  blog.blog.splice(5, 0, adElement4);
+  blog.blog.splice(10, 0, adElement2);
   blog.blog.splice(7, 0, adElement3);
-  blog.blog.splice(10, 0, adElement4);
   blog.blog.splice(12, 0, adElement5);
 
   return (
