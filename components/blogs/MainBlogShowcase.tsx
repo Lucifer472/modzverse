@@ -1,9 +1,8 @@
 import { blog } from "@prisma/client";
 import { ArrowDown } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import BlogLink from "./BlogLink";
-import NoBlog from "../etc/NoBlog";
+// import NoBlog from "../etc/NoBlog";
 
 interface authorBlog extends blog {
   Author: {
@@ -22,8 +21,8 @@ const MainBlogShowcase = ({ title, link, blogData }: MainBlogShowcaseProps) => {
   const leftBlog = blogData.filter((_, index) => index % 2 === 0);
   const rightBlog = blogData.filter((_, index) => index % 2 !== 0);
 
-  if (leftBlog.length === 0) return <NoBlog />;
-  if (rightBlog.length === 0) return <NoBlog />;
+  // if (leftBlog.length === 0) return <NoBlog />;
+  // if (rightBlog.length === 0) return <NoBlog />;
 
   return (
     <section className="bg-white w-full h-full py-2 md:py-4 lg:py-6">

@@ -4,7 +4,7 @@ import FeaturedBlogList from "./FeaturedBlogList";
 import textSlice from "@/lib/text-util";
 import { blog } from "@prisma/client";
 import { convertDateFormat } from "@/lib/date-util";
-import NoBlog from "../etc/NoBlog";
+// import NoBlog from "../etc/NoBlog";
 
 interface blogUser extends blog {
   Author: {
@@ -29,8 +29,8 @@ const BlogListing = ({
   const FirstBlog = blogData[0];
   const mainBlogData = blogData.splice(1, 3);
 
-  if (FirstBlog === undefined) return <NoBlog />;
-  if (mainBlogData === undefined) return <NoBlog />;
+  // if (FirstBlog === undefined) return <NoBlog />;
+  // if (mainBlogData === undefined) return <NoBlog />;
   return (
     <section className="w-full h-full bg-white">
       <div className="global-container w-full flex flex-col">
