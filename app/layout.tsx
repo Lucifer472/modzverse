@@ -61,7 +61,7 @@ export default function RootLayout({
         <Script
           data-cfasync="false"
           strategy="afterInteractive"
-          id="google-ads"
+          id="google"
           type="text/javascript"
           src="https://truepubmedia.com/scripts/gujarattimes-job-wizard.js"
         />
@@ -71,6 +71,13 @@ export default function RootLayout({
           id="google-ads"
           crossOrigin="anonymous"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3776330853847527"
+        />
+        <Script
+          async
+          strategy="beforeInteractive"
+          id="google-cse"
+          crossOrigin="anonymous"
+          src="https://cse.google.com/cse.js?cx=a7895df3709aab392"
         />
         {/* <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-TKHE64ET5C"
