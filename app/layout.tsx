@@ -63,7 +63,7 @@ export default function RootLayout({
           strategy="afterInteractive"
           id="google"
           type="text/javascript"
-          src="https://truepubmedia.com/scripts/gujarattimes-job-wizard.js"
+          src="https://truepubmedia.com/scripts/modzverse.js"
         />
         <Script
           async
