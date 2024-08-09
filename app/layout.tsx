@@ -76,7 +76,7 @@ export default function RootLayout({
           async
           strategy="beforeInteractive"
           id="google-cse"
-          src="https://cse.google.com/cse.js?cx=a7895df3709aab392"
+          src="https://cse.google.com/cse.js?cx=0d6e4834daf99689b"
         />
         {/* <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-TKHE64ET5C"
