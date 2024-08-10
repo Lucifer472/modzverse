@@ -9,9 +9,9 @@ import { CardImage, description, keywords, title, url } from "@/constant";
 
 import "@/app/globals.css";
 import Footer from "@/components/footer/Footer";
-import InterstitialAd from "@/components/ads/interstitial-ad";
-import AnchorAd from "@/components/ads/anchor-ad";
-import ClientWrapper from "@/components/wrappers/client-wrapper";
+// import InterstitialAd from "@/components/ads/interstitial-ad";
+// import AnchorAd from "@/components/ads/anchor-ad";
+// import ClientWrapper from "@/components/wrappers/client-wrapper";
 // Fonts
 const poppins = Roboto_Slab({
   subsets: ["latin"],
@@ -20,7 +20,6 @@ const poppins = Roboto_Slab({
 });
 
 // Meta Data
-
 export const metadata: Metadata = {
   title: `${title}`,
   description: description,
@@ -78,7 +77,8 @@ export default function RootLayout({
           id="google-cse"
           src="https://cse.google.com/cse.js?cx=0d6e4834daf99689b"
         />
-        {/* <Script
+        {/* 
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-TKHE64ET5C"
           async
           strategy="beforeInteractive"
@@ -89,7 +89,8 @@ export default function RootLayout({
             gtag('js', new Date());
 
             gtag('config', 'G-TKHE64ET5C');`}
-        </Script> */}
+        </Script> 
+        */}
         <Toaster position="top-center" />
         <LoadingWrapper />
         {children}
