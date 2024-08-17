@@ -175,17 +175,17 @@ const slugPage = async ({ params }: { params: { slug: string[] } }) => {
       <div className="w-full padding md:py-4 bg-[#a03131] border-b border-gray-300/30 flex flex-wrap items-center justify-start">
         <div className="flex global-container flex-col">
           <div className="flex flex-wrap items-center justify-start">
-            <Link href={"/"} className="text-[8px] underline text-gray-100">
+            <Link href={"/"} className="text-xs underline text-gray-100">
               Home
             </Link>
-            <span className="text-[8px] mx-1 text-gray-100">{`>>`}</span>
+            <span className="text-xs mx-1 text-gray-100">{`>>`}</span>
             <Link
               href={blog.category}
-              className="text-[8px] underline capitalize text-gray-100"
+              className="text-xs underline capitalize text-gray-100"
             >
               {blog?.category.slice(1).replace("-", " ")}
             </Link>
-            <span className="text-[8px] mx-1 text-gray-100">{`>>`}</span>
+            <span className="text-xs mx-1 text-gray-100">{`>>`}</span>
           </div>
           <h1 className="text-2xl leading-[1.2em] text-center text-white pt-4">
             {blog.title}

@@ -34,13 +34,13 @@ const BlogListing = ({
   return (
     <section className="w-full h-full bg-white">
       <div className="global-container w-full flex flex-col">
-        <div className="w-full flex flex-col items-start justify-start border-b-4 border-main py-2 md:py-4">
+        {/* <div className="w-full flex flex-col items-start justify-start border-b-4 border-main py-2 md:py-4">
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-gray-700">
             {mainTitle}
           </h2>
-        </div>
+        </div> */}
         {reversed && (
-          <div className="w-full flex flex-col-reverse lg:grid lg:grid-cols-5 gap-4 py-4 md:py-8">
+          <div className="w-full flex flex-col-reverse lg:grid lg:grid-cols-5 gap-2 py-2 md:py-4">
             <FeaturedBlogList
               className="col-span-2 flex flex-col w-full"
               title={subTitle}
@@ -78,7 +78,7 @@ const BlogListing = ({
           </div>
         )}
         {!reversed && (
-          <div className="w-full flex flex-col lg:grid lg:grid-cols-5 gap-4 py-4 md:py-8">
+          <div className="w-full flex flex-col lg:grid lg:grid-cols-5 gap-2 py-2 md:py-4">
             <div className="col-span-3 bg-slate-50 rounded-sm">
               <Link href={`/${FirstBlog.url}`}>
                 <article className="w-full flex flex-col cursor-pointer p-2 shadow-sm">

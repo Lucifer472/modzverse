@@ -27,12 +27,12 @@ const MainBlogShowcase = ({ title, link, blogData }: MainBlogShowcaseProps) => {
   return (
     <section className="bg-white w-full h-full py-2 md:py-4 lg:py-6">
       <div className="global-container w-full flex flex-col">
-        <div className="py-4 w-full flex gap-2 items-center">
+        {/* <div className="py-4 w-full flex gap-2 items-center">
           <h2 className="whitespace-nowrap text-lg sm:text-xl md:text-2xl">
             {title}
           </h2>
           <div className="w-full h-[3px] bg-main" />
-        </div>
+        </div> */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-2">
           <div className="flex flex-col col-span-1">
             {leftBlog.map((l, index) => (
@@ -45,7 +45,7 @@ const MainBlogShowcase = ({ title, link, blogData }: MainBlogShowcaseProps) => {
             ))}
           </div>
         </div>
-        <div className="py-4 w-full flex gap-2 items-center">
+        {/* <div className="py-4 w-full flex gap-2 items-center">
           <div className="w-full h-[3px] bg-main " />
           <Link
             href={`${link}/1`}
@@ -56,7 +56,7 @@ const MainBlogShowcase = ({ title, link, blogData }: MainBlogShowcaseProps) => {
               <ArrowDown />
             </div>
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

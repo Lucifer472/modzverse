@@ -10,7 +10,7 @@ const Footer = () => {
   const isShow = useNavStore((state) => state.isShow);
 
   return (
-    <footer className={cn("w-full bg-black", isShow ? "block" : "hidden")}>
+    <footer className={cn("w-full bg-black", true ? "block" : "hidden")}>
       <div className="global-container flex flex-col text-white p-8">
         <div className="flex items-start justify-between flex-wrap gap-6 py-4">
           <div className="flex flex-col items-start justify-start gap-4">

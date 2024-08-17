@@ -14,7 +14,6 @@ export default function RootLayout({
   return (
     <>
       <Navbar />
-      <div className="gcse-search"></div>
       {children}
       <ScrollToTop />
     </>
