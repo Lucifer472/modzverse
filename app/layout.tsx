@@ -58,13 +58,6 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${poppins.className} overflow-x-hidden`}>
         <Script
-          data-cfasync="false"
-          strategy="afterInteractive"
-          id="google"
-          type="text/javascript"
-          src="https://truepubmedia.com/scripts/modzverse.js"
-        />
-        <Script
           async
           strategy="afterInteractive"
           id="google-ads"
