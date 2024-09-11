@@ -5,6 +5,9 @@ export const getBlogFromUrl = async (url: string) => {
     where: {
       url,
     },
+    include: {
+      Author: true,
+    },
   });
 
   return data;

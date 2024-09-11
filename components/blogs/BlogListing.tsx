@@ -18,6 +18,7 @@ type BlogListingProps = {
   blogData: blogUser[];
   subTitle: string;
   reversed?: boolean;
+  newBlog?: any;
 };
 
 const BlogListing = ({
@@ -25,9 +26,10 @@ const BlogListing = ({
   blogData,
   subTitle,
   reversed,
+  newBlog,
 }: BlogListingProps) => {
-  const FirstBlog = blogData[0];
-  const mainBlogData = blogData.splice(1, 3);
+  const FirstBlog = newBlog ? newBlog : blogData[0];
+  const mainBlogData = blogData.splice(0, 2);
 
   // if (FirstBlog === undefined) return <NoBlog />;
   // if (mainBlogData === undefined) return <NoBlog />;

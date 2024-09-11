@@ -6,6 +6,7 @@ import SearchNav from "@/components/navigation/searc-nav";
 
 import { category, url } from "@/constant";
 import { getAuthorByNumber } from "@/lib/author-util";
+import { getBlogFromUrl } from "@/lib/blog";
 import { getBlogs } from "@/lib/blog-util";
 import Link from "next/link";
 
@@ -76,6 +77,8 @@ export default async function Home() {
     },
   });
 
+  const spec = await getBlogFromUrl("free-sewing-machine-scheme-2024");
+
   return (
     <section className="bg-slate-100 w-full h-full ">
       <script
@@ -94,6 +97,7 @@ export default async function Home() {
           mainTitle={"Latest Blogs"}
           subTitle="Featured Section"
           blogData={latestBlogs}
+          newBlog={spec}
         />{" "}
         {/* <Ad2 /> */}
         <MainBlogShowcase
