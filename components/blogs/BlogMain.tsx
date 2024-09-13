@@ -10,6 +10,7 @@ import Image from "next/image";
 import { Ad1, Ad2, Ad3, Ad5 } from "@/components/ads/ads";
 import { MiddleArticleBlogs } from "@/components/etc/middle-article-blogs";
 import { Separator } from "@/components/ui/separator";
+import { MgAd2 } from "../ads/mg-ad2";
 
 interface blogUser extends blog {
   Author: {
@@ -43,7 +44,7 @@ const BlogMain = ({ blog, link }: { blog: blogUser; link: string }) => {
 
   const adElement5 = {
     type: "Ad",
-    data: Ad1,
+    data: MgAd2,
   };
 
   blog.blog.splice(4, 0, adElement4);

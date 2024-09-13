@@ -77,8 +77,6 @@ export default async function Home() {
     },
   });
 
-  const spec = await getBlogFromUrl("free-sewing-machine-scheme-2024");
-
   return (
     <section className="bg-slate-100 w-full h-full ">
       <script
@@ -97,7 +95,6 @@ export default async function Home() {
           mainTitle={"Latest Blogs"}
           subTitle="Featured Section"
           blogData={latestBlogs}
-          newBlog={spec}
         />{" "}
         {/* <Ad2 /> */}
         <MainBlogShowcase

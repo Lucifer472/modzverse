@@ -63,6 +63,12 @@ export default function RootLayout({
           id="google-ads"
           crossOrigin="anonymous"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3776330853847527"
+        />{" "}
+        <Script
+          async
+          strategy="afterInteractive"
+          id="mgid-ads"
+          src="https://jsc.mgid.com/site/982677.js"
         />
         <Script
           async

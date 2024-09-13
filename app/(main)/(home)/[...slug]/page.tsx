@@ -18,6 +18,7 @@ import BlogList from "@/components/blogs/BlogList";
 import Pagination from "@/components/etc/Pagination";
 import AbPage from "@/components/views/ab-page";
 import CPage from "@/components/views/c-page";
+import { MgAd1 } from "@/components/ads/mg-ad1";
 
 const slugPage = async ({ params }: { params: { slug: string[] } }) => {
   const params1 = params.slug[0];
@@ -203,6 +204,7 @@ const slugPage = async ({ params }: { params: { slug: string[] } }) => {
         ></script>
         <Ad4 />
         <BlogMain blog={blog as any} link={blog.category} />
+        <MgAd1 />
         {faq && faq[0].question !== "" && (
           <Accordion
             type="single"
